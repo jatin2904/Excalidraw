@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
 import useBoardStore from '../store/boardStore';
 
-const SOCKET_URL = 'http://localhost:3001';
+const SOCKET_URL = 'https://excalidraw-78oh.onrender.com';
 
 export default function useSocket(boardId) {
   const socketRef = useRef(null);
