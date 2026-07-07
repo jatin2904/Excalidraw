@@ -18,7 +18,7 @@ export default function Home() {
 
   const loadBoards = async () => {
     try {
-      const data = await apiFetch('/boards');
+      const data = await apiFetch('/api/boards');
       setBoards(data);
     } catch (err) {
       console.error('Failed to load boards:', err.message);
