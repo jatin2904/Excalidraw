@@ -30,7 +30,7 @@ export default function Home() {
   const createBoard = async () => {
     setCreating(true);
     try {
-      const board = await apiFetch('/boards', {
+      const board = await apiFetch('/api/boards', {
         method: 'POST',
         body: JSON.stringify({ name: 'Untitled Board' }),
       });
