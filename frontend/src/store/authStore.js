@@ -6,7 +6,7 @@ const useAuthStore = create((set) => ({
   token: localStorage.getItem('token') || null,
 
   register: async (username, email, password) => {
-    const data = await apiFetch('/auth/register', {
+    const data = await apiFetch('/api/auth/register', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
     });
@@ -17,7 +17,7 @@ const useAuthStore = create((set) => ({
   },
 
   login: async (email, password) => {
-    const data = await apiFetch('/auth/login', {
+    const data = await apiFetch('/api/auth/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
     });
